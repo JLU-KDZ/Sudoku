@@ -1,0 +1,29 @@
+/**index.wxss**/
+.top-container {
+  padding: 0px 50rpx;
+  /*align-items: center;*/
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  background: linear-gradient(#f9faf9 50%, #f9faf9 50%);
+}
+
+.top-body {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.226);
+}
+
+.title {
+  align-self: center;
+  margin-top: 100rpx;
+  margin-bottom: 50rpx;
+  font-size: x-large; 
+}
+
+.body {
+  margin-top: 50rpx;
+}

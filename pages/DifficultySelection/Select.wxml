@@ -1,0 +1,9 @@
+<!--pages/DifficultySelection/Select.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">数独</view></cu-custom>
+<view style="font-family:fantasy;font-size:30px;display: flex;justify-content: center;align-items: center;margin-top: 100px;">难度</view>
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-blue lg" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;" bindtap="easy">入门</button>
+  <button class="cu-btn bg-blue margin-tb-sm lg"  style="margin-left: 100px;margin-right: 100px;margin-top: 20px; " bindtap="normal">简单</button>
+  <button class="cu-btn bg-blue margin-tb-sm lg" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;" bindtap="hard">一般</button>
+  <button class="cu-btn bg-blue margin-tb-sm lg" style="margin-left: 100px;margin-right: 100px;margin-top: 20px;"bindtap="veryhard">困难</button>
+</view>

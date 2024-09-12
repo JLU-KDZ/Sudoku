@@ -1,0 +1,157 @@
+/* pages/sudoku/sudoku.wxss */
+/* page {
+  background: linear-gradient(#76d05e 50%, #dddddd 50%);
+} */
+
+.top-container {
+  padding: 0px 50rpx;
+  /*align-items: center;*/
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: linear-gradient(hsl(0, 100%, 100%) 50%, #ffffff 50%);
+}
+.grid-container {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: 650rpx;
+  height: 650rpx;*/
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row-0, .row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: content-box;
+}
+
+.col-0, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 {
+  display: inline-block;
+  /*width: 72rpx;
+  height: 72rpx;*/
+  box-sizing: content-box;
+}
+.grid-cell {
+  background: #e5e5e5;
+  /* 长宽超过此值，在ide中的ipad机型上以及真机的荣耀8手机上，会出现整体高度不足的问题，某些cell就会被压缩导致框线丢失和方框变扁 */
+  width: 68rpx;
+  height: 68rpx;
+  line-height: 66rpx;
+  text-align: center;
+  border: 0.5rpx solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.row-2, .row-5 {
+  border-bottom: 4rpx solid #bbbbbb;
+}
+.col-2, .col-5 {
+  border-right: 4rpx solid #bbbbbb;
+}
+
+.row-2 .grid-cell, .row-5 .grid-cell {
+  border-bottom: 0;
+}
+.row-3 .grid-cell, .row-6 .grid-cell {
+  border-top: 0;
+}
+.col-2 .grid-cell, .col-5 .grid-cell {
+  border-right: 0;
+}
+.col-3 .grid-cell, .col-6 .grid-cell {
+  border-left: 0;
+}
+
+.row-0 .grid-cell {
+  border-top: 1rpx solid #bbbbbb;
+}
+.row-8 .grid-cell {
+  border-bottom: 1rpx solid #bbbbbb;
+}
+.col-0 .grid-cell {
+  border-left: 1rpx solid #bbbbbb;
+}
+.col-8 .grid-cell {
+  border-right: 1rpx solid #bbbbbb;
+}
+
+.row-0 > .col-0 > .grid-cell {
+  border-top-left-radius: 36rpx;
+}
+.row-0 > .col-8 > .grid-cell {
+  border-top-right-radius: 36rpx;
+}
+.row-8 > .col-0 > .grid-cell {
+  border-bottom-left-radius: 36rpx;
+}
+.row-8 > .col-8 > .grid-cell {
+  border-bottom-right-radius: 36rpx;
+}
+
+
+/*============================================*/
+.btn {
+  background: white;
+  border-radius: 10rpx;
+  border-width: 0; 
+  padding: 0;
+  margin: 0;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  /*text-align: center;*/
+  display: inline-block;
+}
+
+.btn-hover {
+  background: #bbbbbb;
+  color: white;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25rpx;
+}
+
+.input-num {
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.input-num.red {
+  color: red;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25rpx;
+  margin-bottom: 25rpx;
+}

@@ -1,0 +1,41 @@
+
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">数独</view></cu-custom>
+<view class="top-container" bindtap='emptyAreaClick'>
+
+  <view class='head'>
+    <!--button class='btn' hover-class='btn-hover'>占位符</button-->
+    <view>
+      <text>耗时：{{timeElapse}}</text>
+    </view>
+    <button class='btn' hover-class='btn-hover' catchtap='goToMenu'>说明</button>
+  </view>
+
+  <view class='grid-container'>
+    <view class="row-{{i}}" wx:for="{{[0, 1, 2, 3, 4, 5, 6, 7, 8]}}" wx:for-item="i">
+      <view class="col-{{j}}" wx:for="{{[0, 1, 2, 3, 4, 5, 6, 7, 8]}}" wx:for-item="j">
+          <view  wx:if="{{flag==1}}" id='cell_{{i}}_{{j}}' class='grid-cell' style="background: {{readyToInput && i==choosingCell[0] && j==choosingCell[1] ? '#acd6ff' : (initMap[i][j]==0 ? 'white' : '#e5e5e5')}}" catchtap='cellClick'>
+            {{initMap[i][j]>0 ? initMap[i][j] : ''}}
+          </view>
+          <view wx:else id='cell_{{i}}_{{j}}' class='grid-cell' style="background: {{readyToInput && i==choosingCell[0] && j==choosingCell[1] ? '#acd6ff' : (initMap01[i][j]==0 ? 'white' : '#e5e5e5')}}" catchtap='cellClick'>{{initMap[i][j]>0 ? initMap[i][j] : ''}}</view>
+      </view>
+    </view>
+  </view>
+
+  
+  <view>
+    <view class='input-row'>
+      <view class='input-num' wx:for='{{[1,2,3,4,5]}}' wx:for-item='i' catchtap='inputNum' data-num='{{i}}'>{{i}}</view>
+    </view>
+    <view class='input-row'>
+      <view class='input-num' wx:for='{{[6,7,8,9]}}' wx:for-item='i' catchtap='inputNum' data-num='{{i}}'>{{i}}</view>
+      <view class='input-num red' catchtap='inputNum' data-num='0'>X</view>
+    </view>
+    <view class="padding flex flex-wrap justify-between align-center bg-white">
+      <button class="cu-btn" catchtap='clean'>清除</button>
+      <button class="cu-btn round" catchtap='doSolve'>求解</button>
+    </view>
+  </view>
+  <view class='bottom'>
+  </view>
+  
+</view>

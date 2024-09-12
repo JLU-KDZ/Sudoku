@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/star/star",
+    "pages/DifficultySelection/Select",
+    "pages/sudoku/sudoku",
+    "pages/menu/menu",
+    "pages/logs/logs"
+    
+  ],
+  "requiredBackgroundModes": ["audio"],
+  "window": {
+    
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "数独计算工具",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "cu-custom":"/colorui/components/cu-custom"
+  },
+ 
+  "sitemapLocation": "sitemap.json"
+  
+  
+  
+}

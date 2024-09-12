@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">数独</view></cu-custom>
+<view class="top-container">
+  <view class="title">
+    说明
+  </view>
+  <view class='body'>
+    1.空格表示未知数。
+  </view>
+  <view class='body'>
+    2.点击空格后，点击下方的数字，将数字填写到宫格。
+  </view>
+  <view class='body'>
+    3.数字区的X表示删除当前宫格的已填数字。
+  </view>
+  <view class='body'>
+    4.点击“求解”键，获得答案。
+  </view>
+  <view class='body'>
+    5.点击"清除"键，重新开始。
+  </view>
+</view>
